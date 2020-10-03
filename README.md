@@ -53,6 +53,7 @@ I also checked the activation for 756 for two other common stem alternations s-d
 
 1. Look at what happens with e.g. other words with double consonants *mummi*, *kissa*, ...
 2. Come up with some nonce-words, *tuotta*, *jommi*, ...
+   1. Flip the consonants and see what happens? e.g. take *merkki* and make it *merppi* or *mertti*
 3. Look at what happens with inverse gradation
 
 
