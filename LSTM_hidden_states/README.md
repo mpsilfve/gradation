@@ -1,4 +1,4 @@
-To run inference on the model:
+To run inference on the model (outputs a file pred.txt):
 
 python3 ../OpenNMT-py/translate.py --src treebank-nouns.tsv.nom2gen.valid.src --model foo_step_3000.pt
 
