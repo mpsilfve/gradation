@@ -1,0 +1,24 @@
+
+## Where the vocab(s) will be written
+save_data: foo
+# Prevent overwriting existing files in the folder
+overwrite: False
+
+src_vocab: foo.vocab.src
+tgt_vocab: foo.vocab.tgt
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: treebank-nouns.tsv.nom2gen.train.src
+        path_tgt: treebank-nouns.tsv.nom2gen.train.tgt
+    valid:
+        path_src: treebank-nouns.tsv.nom2gen.valid.src
+        path_tgt: treebank-nouns.tsv.nom2gen.valid.tgt
+
+save_model: foo
+save_checkpoint_steps: 500
+train_steps: 3000
+valid_steps: 500
+layers: 2
+encoder_type: "brnn"
