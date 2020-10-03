@@ -17,7 +17,7 @@ def max_index(t,state):
     t = torch.cat([t,-t],dim=1)[:,state]
     return t.max(dim=0)[1]
 
-data_hidden_states = pickle.load(HIDDEN_STATES,"br"))
+data_hidden_states = pickle.load(open(HIDDEN_STATES,"br"))
 annotated_data = [l.split(",") for l in open(VALID_FILE).read().split("\n")][1:]
 
 def get_max_index(ch,state):
