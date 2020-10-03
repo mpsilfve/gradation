@@ -9,7 +9,16 @@ https://www.overleaf.com/project/5f72820f4950f80001bb5649
 
 I started with something slightly easier than analyzing the activations in the network, namely analyzing the encoder hidden states. I trained a bidirectional network with 250 hidden states for the nominative -> genitive inflection task. 
 
-When the input is a word form of length N, we get a hidden state tensor of size N x 500. I concatenated that with the negation of itself so that we can find both states which are strongly positive and states which are strongly negative when gradation occurs. This gives a tensor of dimension N x 1000. [I thought this would be better than using absolute value because we are looking for states which behave similarly whenever there is gradation, not something that is strongly negative sometimes and strongly positive other times] 
+When the input is a word form of length N, we get a hidden state tensor of size N x 500. I concatenated that with the negation of itself (`-1 * state`) so that we can find both states which are strongly positive and states which are strongly negative when gradation occurs. This gives a tensor of dimension N x 1000. I thought this would be better than using absolute value because we are looking for states which behave similarly whenever there is gradation, not something that is strongly negative sometimes and strongly positive other times
+
+```
+      k a u p p a 
+1
+2
+3
+...
+1000
+```
 
 I found two states which seem to fire strongly when gradation occurs for all three consonants k, p and t. The exact values don't matter of course but they are 993 and 756. 
 
