@@ -48,3 +48,11 @@ There are a few cases where it doesn't seem to work like Jäte, lAite and so on.
 
 I also checked the activation for 756 for two other common stem alternations s-d as in avaruus/avaruuden and n-s as in ihminen/ihmisen. For those alternations, the maximal activation is all over the string. So, I think this is at least encouraging evidence of the fact that we might have found a gradation tracking state.
 
+## Confounding factors
+
+
+1. Look at what happens with e.g. other words with double consonants *mummi*, *kissa*, ...
+2. Come up with some nonce-words, *tuotta*, *jommi*, ...
+3. ...
+
+
