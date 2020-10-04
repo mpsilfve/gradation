@@ -72,7 +72,7 @@ for state in [476,410,256,349,446]:
     plt.savefig("%s_grad.png" % (state))
 
     data_hs = [(d,hs) for d,hs in zip(annotated_data,data_hidden_states)
-               if d[IS_GRADATION] == "yes"]
+               if d[IS_GRADATION] == "no"]
     plt = plot(data_hs)
     plt.savefig("%s_non_grad.png" % (state))
     plt.close()
