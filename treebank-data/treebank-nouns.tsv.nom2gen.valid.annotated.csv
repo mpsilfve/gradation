@@ -82,7 +82,7 @@ t a v a r a,t a v a r a n,no,-,-,-
 t i e n o o,t i e n o o n,no,-,-,-
 a n i m e,a n i m e n,no,-,-,-
 r o i s t o,r o i s t o n,no,-,-,-
-k a l i f a a t t i,k a l i f a a t i n,no,-,-,-
+k a l i f a a t t i,k a l i f a a t i n,yes,quantitative,t,-
 n e r o,n e r o n,no,-,-,-
 h a a r n i s k a,h a a r n i s k a n,no,-,-,-
 u p s e e r i,u p s e e r i n,no,-,-,-
@@ -296,7 +296,7 @@ s i l t a,s i l l a n,yes,qualitative,t,-
 l a a j u u s,l a a j u u d e n,no,-,-,-
 t i e d o t t a m i n e n,t i e d o t t a m i s e n,no,-,-,-
 a n s a,a n s a n,no,-,-,-
-i n s t r u m e n t t i,i n s t r u m e n t i n,no,-,-,-
+i n s t r u m e n t t i,i n s t r u m e n t i n,yes,quantitative,t,-
 v a r o i t u s,v a r o i t u k s e n,no,-,-,-
 p u h e l i n,p u h e l i m e n,no,-,-,-
 r a h a,r a h a n,no,-,-,-
@@ -334,7 +334,7 @@ h e l p o t t a m i n e n,h e l p o t t a m i s e n,no,-,-,-
 s ä h k ö,s ä h k ö n,no,-,-,-
 k a t e g o r i a,k a t e g o r i a n,no,-,-,-
 s i s k o,s i s k o n,no,-,-,-
-i t u,i d u n,no,-,-,-
+i t u,i d u n,yes,qualitative,t,-
 k i t a r a,k i t a r a n,no,-,-,-
 s u k u p u u t t o,s u k u p u u t o n,yes,quantitative,t,-
 t e m p o,t e m p o n,no,-,-,-
@@ -346,7 +346,7 @@ m a t s i,m a t s i n,no,-,-,-
 n a a r a s,n a a r a a n,no,-,-,-
 g r a d u,g r a d u n,no,-,-,-
 p a n n u,p a n n u n,no,-,-,-
-o p p i,o p i n,no,-,-,-
+o p p i,o p i n,yes,quantitative,p,-
 m a n u a a l i,m a n u a a l i n,no,-,-,-
 m u l l i s t u s,m u l l i s t u k s e n,no,-,-,-
 k e r h o,k e r h o n,no,-,-,-
@@ -392,8 +392,8 @@ h i l j a i s u u s,h i l j a i s u u d e n,no,-,-,-
 r o i k k u m i n e n,r o i k k u m i s e n,no,-,-,-
 l a i t e,l a i t t e e n,yes,quantitative,t,-
 v ä y l ä,v ä y l ä n,no,-,-,-
-l i k v i d i t e e t t i,l i k v i d i t e e t i n,no,-,-,-
-m a t e m a t i i k k a,m a t e m a t i i k a n,no,-,-,-
+l i k v i d i t e e t t i,l i k v i d i t e e t i n,yes,quantitative,t,-
+m a t e m a t i i k k a,m a t e m a t i i k a n,yes,quantitative,k,-
 h i k o i l e m i n e n,h i k o i l e m i s e n,no,-,-,-
 k ä r s i v ä l l i s y y s,k ä r s i v ä l l i s y y d e n,no,-,-,-
 r o k o t u s,r o k o t u k s e n,no,-,-,-
@@ -430,7 +430,7 @@ o t u s,o t u k s e n,no,-,-,-
 m e i k ä l ä i n e n,m e i k ä l ä i s e n,no,-,-,-
 l a s k i a i n e n,l a s k i a i s e n,no,-,-,-
 p ä ä t ö s,p ä ä t ö k s e n,no,-,-,-
-p r i o r i t e e t t i,p r i o r i t e e t i n,no,-,-,-
+p r i o r i t e e t t i,p r i o r i t e e t i n,yes,quantitative,t,-
 h o m o,h o m o n,no,-,-,-
 k a m m i,k a m m i n,no,-,-,-
 m a a n a n t a i,m a a n a n t a i n,no,-,-,-
@@ -467,9 +467,9 @@ v a r m u u s,v a r m u u d e n,no,-,-,-
 m o n u m e n t t i,m o n u m e n t i n,yes,quantitative,t,-
 m ä ä r i t t e l y,m ä ä r i t t e l y n,no,-,-,-
 k i l o,k i l o n,no,-,-,-
-a k t i v i t e e t t i,a k t i v i t e e t i n,no,-,-,-
+a k t i v i t e e t t i,a k t i v i t e e t i n,yes,quantitative,t,-
 t a l o u s,t a l o u d e n,no,-,-,-
-p u s a k k a,p u s a k a n,no,-,-,-
+p u s a k k a,p u s a k a n,yes,quantitative,t,-
 h o s t e l l i,h o s t e l l i n,no,-,-,-
 e s i n e,e s i n e e n,no,-,-,-
 m o n i t i e t e i s y y s,m o n i t i e t e i s y y d e n,no,-,-,-
