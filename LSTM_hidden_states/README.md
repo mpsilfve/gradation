@@ -21,4 +21,4 @@ python3 plot_activation_heat_map.py
 ### 256
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](256_grad.png) |  ![](256_non_grad.png)
+![](heatmaps/256_grad.png) |  ![](heatmaps/256_non_grad.png)
