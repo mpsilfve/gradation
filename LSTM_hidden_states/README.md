@@ -44,7 +44,7 @@ k            | p            | t
 
 ### 410 (highest activation for p gradation)
 
-Seems to be active specifically for those p which undergo gradation as seen by examining "prinsiippi" where the activation for the first and second p differ markedly.  Seems to not be active for k or t.
+Seems to be active specifically for those p which undergo gradation as seen by examining "prinsiippi" where the activation for the first and second p differ markedly.  Some activity for k and t.
 
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
