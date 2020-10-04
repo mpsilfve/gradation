@@ -12,10 +12,11 @@ GRADATION_TYPE=3
 AFFECTED_CONSONANT=4
 DIRECTION=5
 
-def maxpool(t):
-    t = t.squeeze(1)
-    t = torch.cat([t,-t],dim=1)
-    return t.max(dim=0)[0]
+def pool(t):
+    t = t.squeeze(1).abs()
+#    t = torch.cat([t,-t],dim=1)
+    return t[-2,:]
+#    return t.max(dim=0)[0]
 
 
 data_hidden_states = pickle.load(open(HIDDEN_STATES,"br"))
@@ -23,12 +24,13 @@ annotated_data = [l.split(",") for l in open(VALID_FILE).read().split("\n")][1:]
 
 def get_deltas(ch,top_n):
     deltas = []
-    for v in range(1000):
+#    for v in range(1000):
+    for v in range(500):
         all_val = []
         yes_val = []
         no_val = []
         for datum, ss in zip(annotated_data, data_hidden_states):
-            s = maxpool(ss).numpy()
+            s = pool(ss).numpy()
             all_val.append(s[v])
             if datum[AFFECTED_CONSONANT] == ch:
                 yes_val.append(s[v])
@@ -43,9 +45,9 @@ def get_deltas(ch,top_n):
     deltas.sort()
     return deltas[-top_n:]
 
-k_set = get_deltas("k",30)
-t_set = get_deltas("t",30)
-p_set = get_deltas("p",30)
+k_set = get_deltas("k",20)
+t_set = get_deltas("t",20)
+p_set = get_deltas("p",20)
 
 print("TOP 30 states firing when gradation occurs for each consonant:")
 print("K",k_set)
