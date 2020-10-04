@@ -37,6 +37,9 @@ k            | p            | t
 ![](heatmaps/349_k.png) |  ![](heatmaps/349_p.png) | ![](heatmaps/349_t.png)
 
 ### 410 (highest activation for p gradation)
+
+Seems to be active specifically for those p which undergo gradation as seen by examining "prinsiippi" where the activation for the first and second p differ markedly.  Seems to not be active for k or t.
+
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
 ![](heatmaps/410_grad.png) |  ![](heatmaps/410_non_grad.png)
