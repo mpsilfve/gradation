@@ -55,6 +55,9 @@ k            | p            | t
 ![](heatmaps/446_k.png) |  ![](heatmaps/446_p.png) | ![](heatmaps/446_t.png)
 
 ### 476 (highest activation for k gradation)
+
+This one just seems to associate with k regardless of where it occurs.
+
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
 ![](heatmaps/476_grad.png) |  ![](heatmaps/476_non_grad.png)
