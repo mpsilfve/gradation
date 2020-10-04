@@ -56,4 +56,10 @@ I also checked the activation for 756 for two other common stem alternations s-d
    1. Flip the consonants and see what happens? e.g. take *merkki* and make it *merppi* or *mertti*
 3. Look at what happens with inverse gradation
 
+## Fran TODO:
 
+1. Take all the words in the valid data with double consonant (~[pkt]) and change them to ptk at random
+2. Take all the words in the valid data with pkt and change them to another consonant at random
+3. Take all the words in the valid data with pkt and shuffle the ptk.
+
+NB: Make sure that the generated words are not actual words in the training data.
