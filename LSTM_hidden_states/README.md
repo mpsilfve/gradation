@@ -28,6 +28,9 @@ k            | p            | t
 ![](heatmaps/256_k.png) |  ![](heatmaps/256_p.png) | ![](heatmaps/256_t.png)
 
 ### 349 (among top-20 active states for k, p and t gradation)
+
+Maybe this one always fires a bit at the end of the string but it's clearly stronger when gradation is present.
+
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
 ![](heatmaps/349_grad.png) |  ![](heatmaps/349_non_grad.png)
