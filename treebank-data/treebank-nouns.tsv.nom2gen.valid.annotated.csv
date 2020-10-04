@@ -469,7 +469,7 @@ m ä ä r i t t e l y,m ä ä r i t t e l y n,no,-,-,-
 k i l o,k i l o n,no,-,-,-
 a k t i v i t e e t t i,a k t i v i t e e t i n,yes,quantitative,t,-
 t a l o u s,t a l o u d e n,no,-,-,-
-p u s a k k a,p u s a k a n,yes,quantitative,t,-
+p u s a k k a,p u s a k a n,yes,quantitative,k,-
 h o s t e l l i,h o s t e l l i n,no,-,-,-
 e s i n e,e s i n e e n,no,-,-,-
 m o n i t i e t e i s y y s,m o n i t i e t e i s y y d e n,no,-,-,-
