@@ -19,6 +19,9 @@ python3 plot_activation_heat_map.py
 ## Heatmaps for various states
 
 ### 256 (highest activation for t gradation, also high activation for k and t)
+
+Almost looks like the activation might be positive when we have weak -> strong grade as in tarjotin -> tarjottimen and negative when we've got strong -> weak grade as in monumentti -> monumentin. 
+
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
 ![](heatmaps/256_grad.png) |  ![](heatmaps/256_non_grad.png)
