@@ -1,7 +1,7 @@
 import pickle
 import torch
 
-HIDDEN_STATES="foo_step_3000.pt.treebank-nouns.tsv.nom2gen.valid.src.enc_states.pkl"
+HIDDEN_STATES="gradation_step_2500.pt.treebank-nouns.tsv.nom2gen.valid.src.enc_states.pkl"
 VALID_FILE="treebank-nouns.tsv.nom2gen.valid.annotated.csv"
 
 # Fields in annotated valid data
@@ -45,9 +45,9 @@ def get_deltas(ch,top_n):
     deltas.sort()
     return deltas[-top_n:]
 
-k_set = get_deltas("k",20)
-t_set = get_deltas("t",20)
-p_set = get_deltas("p",20)
+k_set = get_deltas("k",40)
+t_set = get_deltas("t",40)
+p_set = get_deltas("p",40)
 
 print("TOP 30 states firing when gradation occurs for each consonant:")
 print("K",k_set)
@@ -62,3 +62,4 @@ print("States firing when gradation occurs for two distinct consonants:")
 print("K isect P",k_set.intersection(p_set))
 print("K isect T",k_set.intersection(t_set))
 print("P isect T",p_set.intersection(t_set))
+print("K isect P isect T",k_set.intersection(p_set.intersection(t_set)))

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 seed(0)
 
-HIDDEN_STATES="foo_step_3000.pt.treebank-nouns.tsv.nom2gen.valid.src.enc_states.pkl"
+HIDDEN_STATES="gradation_step_2500.pt.treebank-nouns.tsv.nom2gen.valid.src.enc_states.pkl"
 VALID_FILE="treebank-nouns.tsv.nom2gen.valid.annotated.csv"
 
 # Fields in annotated valid data
@@ -59,7 +59,7 @@ def plot(data_hs):
             im.axes.text(j,i,letter,fontsize=12,ha='center',va='center')
     return plt
 
-for state in [476,410,256,349,446]:
+for state in [45,110,478,428,476,424]:
     for cons in "kpt":
         data_hs = [(d,hs) for d,hs in zip(annotated_data,data_hidden_states)
                    if d[AFFECTED_CONSONANT] == cons]
