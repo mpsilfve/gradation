@@ -64,12 +64,12 @@ for state in [476,410,256,349,446]:
         data_hs = [(d,hs) for d,hs in zip(annotated_data,data_hidden_states)
                    if d[AFFECTED_CONSONANT] == cons]
         plt = plot(data_hs)
-        plt.savefig("%s_%s.png" % (state,cons))
+        plt.savefig("heatmaps/%s_%s.png" % (state,cons))
     
     data_hs = [(d,hs) for d,hs in zip(annotated_data,data_hidden_states)
                if d[IS_GRADATION] == "yes"]
     plt = plot(data_hs)
-    plt.savefig("%s_grad.png" % (state))
+    plt.savefig("heatmaps/%s_grad.png" % (state))
 
     data_hs = [(d,hs) for d,hs in zip(annotated_data,data_hidden_states)
                if d[IS_GRADATION] == "no"]
