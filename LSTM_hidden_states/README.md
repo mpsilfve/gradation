@@ -18,17 +18,17 @@ python3 plot_activation_heat_map.py
 
 ## Heatmaps for various states
 
-### 256 (highest activation for t gradation, also high activation for k and t)
+### 45 (highest activation for t gradation, also high activation for k and t)
 
 Almost looks like the activation might be positive when we have weak -> strong alternation as in tarjotin -> tarjottimen and negative when we've got strong -> weak alternation as in monumentti -> monumentin. This is more clearly visible for "tiedote", "ranne" and "vaikute"
 
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](heatmaps/256_grad.png) |  ![](heatmaps/256_non_grad.png)
+![](heatmaps/45_grad.png) |  ![](heatmaps/45_non_grad.png)
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/256_k.png) |  ![](heatmaps/256_p.png) | ![](heatmaps/256_t.png)
+![](heatmaps/45_k.png) |  ![](heatmaps/45_p.png) | ![](heatmaps/45_t.png)
 
 ### 349 (among top-20 active states for k, p and t gradation)
 
