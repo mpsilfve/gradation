@@ -42,17 +42,17 @@ k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](heatmaps/466_k.png) |  ![](heatmaps/466_p.png) | ![](heatmaps/466_t.png)
 
-### 410 (highest activation for p gradation)
+### 197 (highest activation for p gradation)
 
 Seems to be active specifically for those p which undergo gradation as seen by examining "prinsiippi" where the activation for the first and second p differ markedly.  Some activity for k and t.
 
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](heatmaps/410_grad.png) |  ![](heatmaps/410_non_grad.png)
+![](heatmaps/197_grad.png) |  ![](heatmaps/197_non_grad.png)
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/410_k.png) |  ![](heatmaps/410_p.png) | ![](heatmaps/410_t.png)
+![](heatmaps/197_k.png) |  ![](heatmaps/197_p.png) | ![](heatmaps/197_t.png)
 
 ### 446 (among top-20 active states for k, p and t gradation)
 Gradation            | No gradation
