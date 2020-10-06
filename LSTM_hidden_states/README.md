@@ -54,23 +54,36 @@ k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](heatmaps/197_k.png) |  ![](heatmaps/197_p.png) | ![](heatmaps/197_t.png)
 
-### 446 (among top-20 active states for k, p and t gradation)
+### 207 (among top-20 active states for k, p and t gradation)
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](heatmaps/446_grad.png) |  ![](heatmaps/446_non_grad.png)
+![](heatmaps/207_grad.png) |  ![](heatmaps/207_non_grad.png)
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/446_k.png) |  ![](heatmaps/446_p.png) | ![](heatmaps/446_t.png)
+![](heatmaps/207_k.png) |  ![](heatmaps/207_p.png) | ![](heatmaps/207_t.png)
 
-### 476 (highest activation for k gradation)
+### 402 (highest activation for k gradation)
 
 This one just seems to associate with k regardless of where it occurs.
 
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](heatmaps/476_grad.png) |  ![](heatmaps/476_non_grad.png)
+![](heatmaps/402_grad.png) |  ![](heatmaps/402_non_grad.png)
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/476_k.png) |  ![](heatmaps/476_p.png) | ![](heatmaps/476_t.png)
+![](heatmaps/402_k.png) |  ![](heatmaps/402_p.png) | ![](heatmaps/402_t.png)
+
+### 297 (highest activation for k gradation)
+
+This one just seems to associate with k regardless of where it occurs.
+
+Gradation            | No gradation
+:-------------------------:|:-------------------------:
+![](heatmaps/297_grad.png) |  ![](heatmaps/297_non_grad.png)
+
+k            | p            | t
+:-------------------------:|:-------------------------:|:-------------------------:
+![](heatmaps/297_k.png) |  ![](heatmaps/297_p.png) | ![](heatmaps/297_t.png)
+
