@@ -18,7 +18,7 @@ python3 plot_activation_heat_map.py
 
 ## Heatmaps for various states
 
-### 451 (highest activation for t gradation, also high activation for k and t)
+### 451 (highest overall activation gradation)
 
 Almost looks like the activation might be positive when we have weak -> strong alternation as in tarjotin -> tarjottimen and negative when we've got strong -> weak alternation as in monumentti -> monumentin. This is more clearly visible for "tiedote", "ranne" and "vaikute"
 
@@ -30,19 +30,19 @@ k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](heatmaps/451_k.png) |  ![](heatmaps/451_p.png) | ![](heatmaps/451_t.png)
 
-### 466 (among top-20 active states for k, p and t gradation)
+### 207 (among top-20 active states for k, p and t gradation)
 
 Maybe this one always fires a bit at the end of the string but it's clearly stronger when gradation is present.
 
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](heatmaps/466_grad.png) |  ![](heatmaps/466_non_grad.png)
+![](heatmaps/207_grad.png) |  ![](heatmaps/207_non_grad.png)
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/466_k.png) |  ![](heatmaps/466_p.png) | ![](heatmaps/466_t.png)
+![](heatmaps/207_k.png) |  ![](heatmaps/207_p.png) | ![](heatmaps/207_t.png)
 
-### 197 (highest activation for p gradation)
+### 357 (among top-20 active states for k, p and t gradation)
 
 Seems to be active specifically for those p which undergo gradation as seen by examining "prinsiippi" where the activation for the first and second p differ markedly.  Some activity for k and t.
 
@@ -52,33 +52,9 @@ Gradation            | No gradation
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/197_k.png) |  ![](heatmaps/197_p.png) | ![](heatmaps/197_t.png)
+![](heatmaps/357_k.png) |  ![](heatmaps/357_p.png) | ![](heatmaps/357_t.png)
 
-### 207 (among top-20 active states for k, p and t gradation)
-Gradation            | No gradation
-:-------------------------:|:-------------------------:
-![](heatmaps/207_grad.png) |  ![](heatmaps/207_non_grad.png)
-
-k            | p            | t
-:-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/207_k.png) |  ![](heatmaps/207_p.png) | ![](heatmaps/207_t.png)
-
-### 388 (highest activation for k gradation)
-
-This one just seems to associate with k regardless of where it occurs.
-
-Gradation            | No gradation
-:-------------------------:|:-------------------------:
-![](heatmaps/388_grad.png) |  ![](heatmaps/388_non_grad.png)
-
-k            | p            | t
-:-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/388_k.png) |  ![](heatmaps/388_p.png) | ![](heatmaps/388_t.png)
-
-### 297 (highest activation for k gradation)
-
-This one just seems to associate with k regardless of where it occurs.
-
+### 297 (Highest activation for k gradation)
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
 ![](heatmaps/297_grad.png) |  ![](heatmaps/297_non_grad.png)
@@ -86,4 +62,28 @@ Gradation            | No gradation
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](heatmaps/297_k.png) |  ![](heatmaps/297_p.png) | ![](heatmaps/297_t.png)
+
+### 402 (highest activation for p gradation)
+
+This one just seems to associate with k regardless of where it occurs.
+
+Gradation            | No gradation
+:-------------------------:|:-------------------------:
+![](heatmaps/402_grad.png) |  ![](heatmaps/402_non_grad.png)
+
+k            | p            | t
+:-------------------------:|:-------------------------:|:-------------------------:
+![](heatmaps/402_k.png) |  ![](heatmaps/402_p.png) | ![](heatmaps/402_t.png)
+
+### 310 (highest activation for t gradation)
+
+This one just seems to associate with k regardless of where it occurs.
+
+Gradation            | No gradation
+:-------------------------:|:-------------------------:
+![](heatmaps/310_grad.png) |  ![](heatmaps/310_non_grad.png)
+
+k            | p            | t
+:-------------------------:|:-------------------------:|:-------------------------:
+![](heatmaps/310_k.png) |  ![](heatmaps/310_p.png) | ![](heatmaps/310_t.png)
 
