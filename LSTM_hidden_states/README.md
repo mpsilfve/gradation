@@ -63,17 +63,17 @@ k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](heatmaps/207_k.png) |  ![](heatmaps/207_p.png) | ![](heatmaps/207_t.png)
 
-### 402 (highest activation for k gradation)
+### 388 (highest activation for k gradation)
 
 This one just seems to associate with k regardless of where it occurs.
 
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](heatmaps/402_grad.png) |  ![](heatmaps/402_non_grad.png)
+![](heatmaps/388_grad.png) |  ![](heatmaps/388_non_grad.png)
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
-![](heatmaps/402_k.png) |  ![](heatmaps/402_p.png) | ![](heatmaps/402_t.png)
+![](heatmaps/388_k.png) |  ![](heatmaps/388_p.png) | ![](heatmaps/388_t.png)
 
 ### 297 (highest activation for k gradation)
 
