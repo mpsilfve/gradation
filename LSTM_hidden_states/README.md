@@ -48,7 +48,7 @@ Seems to be active specifically for those p which undergo gradation as seen by e
 
 Gradation            | No gradation
 :-------------------------:|:-------------------------:
-![](heatmaps/197_grad.png) |  ![](heatmaps/197_non_grad.png)
+![](heatmaps/357_grad.png) |  ![](heatmaps/357_non_grad.png)
 
 k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
