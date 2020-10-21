@@ -1,4 +1,4 @@
-﻿NOM,GEN,Gradation (yes/no),Type (quantitative/qualitative),Affected consonant (k/t/p),Direction (direct/inverse)
+NOM,GEN,Gradation (yes/no),Type (quantitative/qualitative),Affected consonant (k/t/p),Direction (direct/inverse)
 l i n n o i t u s,l i n n o i t u k s e n,no,-,-,-
 s i p u l i,s i p u l i n,no,-,-,-
 v ä s y m y s,v ä s y m y k s e n,no,-,-,-
@@ -478,6 +478,94 @@ m u k a e l m a,m u k a e l m a n,no,-,-,-
 o l u t,o l u e n,yes,quantitative,t,-
 s a m m a k k o,s a m m a k o n,yes,quantitative,k,-
 s a d e t t a j a,s a d e t t a j a n,no,-,-,-
+_,_,_,_,_,_
+h a p p i,h a p e n,yes,quantitative,p,direct
+k i l p a,k i l v a n,yes,qualitative,p,direct
+k o i p i,k o i v e n,yes,qualitative,p,direct
+t a p p o,t a p o n,yes,quantitative,p,direct
+u l a p p a,u l a p a n,yes,quantitative,p,direct
+t a p a,t a v a n,yes,qualitative,p,direct
+s i i p i,s i i v e n,yes,qualitative,p,direct
+k ä r p p ä,k ä r p ä n,yes,quantitative,p,direct
+h i p p i,h i p i n,yes,quantitative,p,direct
+p e p p u,p e p u n,yes,quantitative,p,direct
+l o p p u,l o p u n,yes,quantitative,p,direct
+h a p p o,h a p o n,yes,quantitative,p,direct
+t u p o,t u p o n,no,quantitative,-,-
+t u r p a,t u r v a n,yes,qualitative,p,direct
+k u p p a,k u p a n,yes,quantitative,p,direct
+t a p p i,t a p i n,yes,quantitative,p,direct
+h ö r p p y,h ö r p y n,yes,quantitative,p,direct
+v i p p i,v i p i n,yes,quantitative,p,direct
+a p u,a v u n,yes,qualitative,p,direct
+p a p u,p a v u n,yes,qualitative,p,direct
+r a p u,r a v u n,yes,qualitative,p,direct
+ä i p p ä,ä i p ä n,yes,quantitative,p,direct
+l e p o,l e v o n,yes,qualitative,p,direct
+r y p p y,r y p y n,yes,quantitative,p,direct
+p a p p i,p a p i n,yes,quantitative,p,direct
+m e p p i,m e p i n,yes,quantitative,p,direct
+r i p e,r i p p e e n,yes,quantitative,p,inverse
+t i r p p a,t i r p a n,yes,quantitative,p,direct
+l a m p p u,l a m p u n,yes,quantitative,p,direct
+n a p p i,n a p i n,yes,quantitative,p,direct
+p u p u,p u p u n,no,-,-,-
+t e m p p u,t e m p u n,yes,quantitative,p,direct
+k i p p o,k i p o n,yes,quantitative,p,direct
+l e i p ä,l e i v ä n,yes,qualitative,p,direct
+k i p u,k i v u n,yes,qualitative,p,direct
+t o r p p a,t o r p a n,yes,quantitative,p,direct
+l ä m p ö,l ä m m ö n,no,-,-,-
+k i m p p a,k i m p a n,yes,quantitative,p,direct
+p i i p p u,p i i p u n,yes,quantitative,p,direct
+j u o p p o,j u o p o n,yes,quantitative,p,direct
+n a p a,n a v a n,yes,qualitative,p,direct
+t y p p i,t y p e n,yes,quantitative,p,direct
+k r a m p p i,k r a m p i n,yes,quantitative,p,direct
+p i i s p a,p i i s p a n,no,-,-,-
+d u m p p i,d u m p i n,yes,quantitative,p,direct
+l a p p u,l a p u n,yes,quantitative,p,direct
+k o p p i,k o p i n,yes,quantitative,p,direct
+k y l p y,k y l v y n,yes,qualitative,p,direct
+r u m p u,r u m m u n,no,-,-,-
+l a m p i,l a m m e n,no,-,-,-
+v a p p u,v a p u,yes,quantitative,p,direct
+k a u p p a,k a u p a,yes,quantitative,p,direct
+n u r m i k k o,n u r m i k o n,yes,quantitative,k,direct
+r a n n i k k o,r a n n i k o n,yes,quantitative,k,direct
+s i l k k i,s i l k i n,yes,quantitative,k,direct
+f o n e t i i k k a,f o n e t i i k a n,yes,quantitative,k,direct
+r o m a n t i i k k a,r o m a n t i i k a n,yes,quantitative,k,direct
+v a s i k k a,v a s i k a n,yes,quantitative,k,direct
+g e r m a n i s t i i k k a,g e r m a n i s t i i k a n,yes,quantitative,k,direct
+g r a f i i k k a,g r a f i i k a n,yes,quantitative,k,direct
+k a s a k k a,k a s a k a n,yes,quantitative,k,direct
+k o r o k e,k o r o k k e e n,yes,quantitative,k,inverse
+l a u s e k e,l a u s e k k e e n,yes,quantitative,k,inverse
+h i o k e,h i o k k e e n,yes,quantitative,k,inverse
+m u n k k i,m u n k i n,yes,quantitative,k,direct
+k o l k k a,k o l k a n,yes,quantitative,k,direct
+h e i n i k k o,h e i n i k o n,yes,quantitative,k,direct
+p u s i k k o,p u s i k o n,yes,quantitative,k,direct
+k ä n n y k k ä,k ä n n y k ä n,yes,quantitative,k,direct
+l a u k k u,l a u k u n,yes,quantitative,k,direct
+h ä m ä h ä k k i,h ä m ä h ä k i n,yes,quantitative,k,direct
+p e n k k a,p e n k a n,yes,quantitative,k,direct
+m e t a k k a,m e t a k a n,yes,quantitative,k,direct
+m u s i i k k i,m u s i i k i n,yes,quantitative,k,direct
+l a m m i k k o,l a m m i k o n,yes,quantitative,k,direct
+a e r o d y n a m i i k k a,a e r o d y n a m i i k a n,yes,quantitative,k,direct
+p i i k k i,p i i k i n,yes,quantitative,k,direct
+p y s ä k k i,p y s ä k i n,yes,quantitative,k,direct
+s a v u k e,s a v u k k e e n,yes,quantitative,k,inverse
+r e t o r i i k k a,r e t o r i i k a n,yes,quantitative,k,direct
+m e i k k i,m e i k i n,yes,quantitative,k,direct
+t a n k k i,t a n k i n,yes,quantitative,k,direct
+r i k k i,r i k i n,yes,quantitative,k,direct
+l i n k k i,l i n k i n,yes,quantitative,k,direct
+t y k k i,t y k i n,yes,quantitative,k,direct
+t a r v i k e,t a r v i k k e e n,yes,quantitative,k,inverse
+e l ä k e,e l ä k k e e n,yes,quantitative,k,inverse
 ,,,,,
 ,,,,,
 ,,Count gradation:,Count quantitative:,k:,
