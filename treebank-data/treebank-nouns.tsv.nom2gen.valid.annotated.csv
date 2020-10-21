@@ -545,13 +545,11 @@ l a u s e k e,l a u s e k k e e n,yes,quantitative,k,inverse
 h i o k e,h i o k k e e n,yes,quantitative,k,inverse
 m u n k k i,m u n k i n,yes,quantitative,k,direct
 k o l k k a,k o l k a n,yes,quantitative,k,direct
-h e i n i k k o,h e i n i k o n,yes,quantitative,k,direct
 p u s i k k o,p u s i k o n,yes,quantitative,k,direct
 k ä n n y k k ä,k ä n n y k ä n,yes,quantitative,k,direct
 l a u k k u,l a u k u n,yes,quantitative,k,direct
 h ä m ä h ä k k i,h ä m ä h ä k i n,yes,quantitative,k,direct
 p e n k k a,p e n k a n,yes,quantitative,k,direct
-m e t a k k a,m e t a k a n,yes,quantitative,k,direct
 m u s i i k k i,m u s i i k i n,yes,quantitative,k,direct
 l a m m i k k o,l a m m i k o n,yes,quantitative,k,direct
 a e r o d y n a m i i k k a,a e r o d y n a m i i k a n,yes,quantitative,k,direct
@@ -560,7 +558,6 @@ p y s ä k k i,p y s ä k i n,yes,quantitative,k,direct
 s a v u k e,s a v u k k e e n,yes,quantitative,k,inverse
 r e t o r i i k k a,r e t o r i i k a n,yes,quantitative,k,direct
 m e i k k i,m e i k i n,yes,quantitative,k,direct
-t a n k k i,t a n k i n,yes,quantitative,k,direct
 r i k k i,r i k i n,yes,quantitative,k,direct
 l i n k k i,l i n k i n,yes,quantitative,k,direct
 t y k k i,t y k i n,yes,quantitative,k,direct
