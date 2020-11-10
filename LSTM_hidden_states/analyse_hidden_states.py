@@ -11,7 +11,7 @@ np.random.seed(12345678)
 
 from example_features import *
 
-VALID_FILE="treebank-nouns.tsv.nom2gen.valid.annotated.csv"
+VALID_FILE="data/treebank-nouns.tsv.nom2gen.valid.annotated.csv"
 
 parser = argparse.ArgumentParser(description="Output table for difference in state activations for examples which undergo gradation and examples which don't.")
 parser.add_argument('--representation', dest="representation", type=str,

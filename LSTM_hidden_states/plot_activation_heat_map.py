@@ -20,7 +20,7 @@ args = parser.parse_args()
 encoder_repr=args.representation
 encoder_states=[int(s) for s in args.states.split(",")]
 
-VALID_FILE="treebank-nouns.tsv.nom2gen.valid.annotated.csv"
+VALID_FILE="data/treebank-nouns.tsv.nom2gen.valid.annotated.csv"
 
 # Fields in annotated valid data
 NOM=0
