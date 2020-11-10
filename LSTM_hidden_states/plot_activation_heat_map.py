@@ -4,10 +4,22 @@ import numpy as np
 from random import shuffle, seed
 import matplotlib
 import matplotlib.pyplot as plt
+import argparse
+
+from example_features import *
 
 seed(0)
 
-HIDDEN_STATES="gradation_step_2500.pt.treebank-nouns.tsv.nom2gen.valid.src.enc_states.pkl"
+parser = argparse.ArgumentParser(description='Plot activation heat maps for encoder states.')
+parser.add_argument('--states', dest="states",type=str,
+                   help='List of states to plot e.g. 1,2,3,4.')
+parser.add_argument('--representation', dest="representation", type=str,
+                   help='Pickle file to read encoder representations from.')
+args = parser.parse_args()
+
+encoder_repr=args.representation
+encoder_states=[int(s) for s in args.states.split(",")]
+
 VALID_FILE="treebank-nouns.tsv.nom2gen.valid.annotated.csv"
 
 # Fields in annotated valid data
@@ -23,7 +35,7 @@ def get_map(t,state):
     t = torch.cat([t,-t],dim=1)[:,state]
     return t.numpy()
 
-data_hidden_states = pickle.load(open(HIDDEN_STATES,"br"))
+data_hidden_states = pickle.load(open(encoder_repr,"br"))
 annotated_data = [l.split(",") for l in open(VALID_FILE).read().split("\n")][1:]
 
 def pad(maps):
@@ -59,12 +71,13 @@ def plot(data_hs):
             im.axes.text(j,i,letter,fontsize=12,ha='center',va='center')
     return plt
 
-for state in [45,110,478,428,476,424]:
-    for cons in "kpt":
-        data_hs = [(d,hs) for d,hs in zip(annotated_data,data_hidden_states)
-                   if d[AFFECTED_CONSONANT] == cons]
+for state in encoder_states:
+    for name, grad_test in zip("k p t qual quant".split(" "),
+                               [is_k, is_p, is_t,qual_gradation, quant_gradation]):
+        data_hs = [(d,hs) for d,hs in 
+                   zip(annotated_data,data_hidden_states) if grad_test(d)]
         plt = plot(data_hs)
-        plt.savefig("heatmaps/%s_%s.png" % (state,cons))
+        plt.savefig("heatmaps/%s_%s.png" % (state,name))
     
     data_hs = [(d,hs) for d,hs in zip(annotated_data,data_hidden_states)
                if d[IS_GRADATION] == "yes"]
