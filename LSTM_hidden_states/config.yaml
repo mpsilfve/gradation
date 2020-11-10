@@ -10,11 +10,11 @@ tgt_vocab: gradation.vocab.tgt
 # Corpus opts:
 data:
     corpus_1:
-        path_src: treebank-nouns.tsv.nom2gen.train.src
-        path_tgt: treebank-nouns.tsv.nom2gen.train.tgt
+        path_src: data/treebank-nouns.tsv.nom2gen.train.src
+        path_tgt: data/treebank-nouns.tsv.nom2gen.train.tgt
     valid:
-        path_src: treebank-nouns.tsv.nom2gen.valid.src
-        path_tgt: treebank-nouns.tsv.nom2gen.valid.tgt
+        path_src: data/treebank-nouns.tsv.nom2gen.valid.src
+        path_tgt: data/treebank-nouns.tsv.nom2gen.valid.tgt
 
 save_model: models/gradation_MODEL
 save_checkpoint_steps: 500
