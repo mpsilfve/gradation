@@ -29,6 +29,10 @@ k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](heatmaps/487_k.png) |  ![](heatmaps/487_p.png) | ![](heatmaps/487_t.png)
 
+Qualitative            | Quantitative  
+:-------------------------:|:-------------------------:
+![](heatmaps/487_qual.png) |  ![](heatmaps/487_quant.png) 
+
 ### Model 3, 484 (among top-5 active states for k, p and t gradation)
 
 Gradation            | No gradation
@@ -39,3 +43,6 @@ k            | p            | t
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](heatmaps/484_k.png) |  ![](heatmaps/484_p.png) | ![](heatmaps/484_t.png)
 
+Qualitative            | Quantitative  
+:-------------------------:|:-------------------------:
+![](heatmaps/484_qual.png) |  ![](heatmaps/484_quant.png) 
