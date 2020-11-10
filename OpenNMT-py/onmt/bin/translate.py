@@ -6,6 +6,7 @@ from __future__ import unicode_literals
 from onmt.utils.logging import init_logger
 from onmt.utils.misc import split_corpus
 from onmt.translate.translator import build_translator, encoder_states
+import onmt.translate.translator
 
 import onmt.opts as opts
 from onmt.utils.parse import ArgumentParser
@@ -13,6 +14,9 @@ from onmt.utils.parse import ArgumentParser
 import pickle
 
 def translate(opt):
+    onmt.translate.translator.perturb_states = [int(s) for s in opt.perturb_states.split(",")]
+    onmt.translate.translator.scaling_factor = opt.scaling_factor
+
     ArgumentParser.validate_translate_opts(opt)
     logger = init_logger(opt.log_file)
 

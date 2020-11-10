@@ -19,8 +19,10 @@ from onmt.utils.misc import tile, set_random_seed, report_matrix
 from onmt.utils.alignment import extract_alignment, build_align_pharaoh
 from onmt.modules.copy_generator import collapse_copy_scores
 
-# Ugly global variable added by Miikka
+# Ugly global variables added by Miikka
 encoder_states = []
+perturb_states = []
+scaling_factor=1.0
 
 def build_translator(opt, report_score=True, logger=None, out_file=None):
     if out_file is None:
@@ -645,6 +647,12 @@ class Translator(object):
         src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
 
         encoder_states.append(memory_bank)
+
+#        for s in [338,166,136,3,70,340,100,29,380,0,491,51,50,440,453,438,197,391,493,259]:
+        for s in perturb_states:
+            if memory_bank.size()[0] > 2:
+                memory_bank[-2,0,s] *= scaling_factor
+
         self.model.decoder.init_state(src, memory_bank, enc_states)
 
         results = {

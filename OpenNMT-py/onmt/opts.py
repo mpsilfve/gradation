@@ -6,6 +6,10 @@ import configargparse
 from onmt.models.sru import CheckSRU
 from onmt.transforms import AVAILABLE_TRANSFORMS
 
+def perturb_opts(parser):
+    group = parser.add_argument_group("Perturb")
+    group.add('-perturb_states','--perturb_states',type=str,required=False)
+    group.add('-scaling_factor','--scaling_factor',type=float,required=False)
 
 def config_opts(parser):
     group = parser.add_argument_group("Configuration")
@@ -720,6 +724,7 @@ def translate_opts(parser):
 
     # Adding options relate to decoding strategy
     _add_decoding_opts(parser)
+    perturb_opts(parser)
 
     # Adding option for logging
     _add_logging_opts(parser, is_train=False)
