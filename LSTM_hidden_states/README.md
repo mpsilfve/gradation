@@ -18,7 +18,7 @@ python3 plot_activation_heat_map.py
 
 ## Heatmaps for various states
 
-### Model 3, State 484 (highest overall activation for gradation for k, p and t)
+### Model 3, State 487 (highest overall activation for gradation for k, p and t)
 
 
 Gradation            | No gradation
