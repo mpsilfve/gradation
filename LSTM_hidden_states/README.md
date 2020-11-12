@@ -47,6 +47,16 @@ Quant. & {\bf0.440} &{\bf0.423} &{\bf0.323} &{\bf0.358} &{\bf0.289} \\
 \end{adjustbox}
 ```
 
+## Additional experiments to run
+
+### Activation scaling experiments
+
+We run activation scaling experiments as a direct test of the influence of a particular hidden state on gradation. So far, we've extracted the top-20 states associated with gradation from model 3 and scaled those by factors -6, -5, ..., -1, 0 and 1. We applied the model on the set of all forms undergoing gradation from the dev data `data/gradating_src.txt` then computed accuracy w.r.t. two "gold standard" files `data/gradating_src.txt` and `data/non_gradating_trg.txt`. The first file contains the correct gold standard output forms like _laukun_ for the nominative _laukku_ which have undergone gradation. The second file contains forms like _laukkun_ which are correct apart from the fact that gradation did not apply.
+
+We would still need to:
+1. Run scaling experiments using 1, 5, 10, and 15 top-states in addition to 20.
+1. Run experiment on other models than 3.
+
 ## Heatmaps for various states (produced by `plot_activation_heat_map.py`)
 
 ### Model 3, State 487 (highest overall activation for gradation for k, p and t)
