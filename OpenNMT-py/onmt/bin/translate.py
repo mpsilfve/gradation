@@ -14,7 +14,10 @@ from onmt.utils.parse import ArgumentParser
 import pickle
 
 def translate(opt):
-    onmt.translate.translator.perturb_states = [int(s) for s in opt.perturb_states.split(",")]
+    if opt.perturb_states != '':
+        onmt.translate.translator.perturb_states = [int(s) for s in opt.perturb_states.split(",")]
+    else:
+        opt.perturb_states = []
     onmt.translate.translator.scaling_factor = opt.scaling_factor
 
     ArgumentParser.validate_translate_opts(opt)
@@ -36,7 +39,8 @@ def translate(opt):
             align_debug=opt.align_debug
             )
 
-    pickle.dump(encoder_states,open("%s.%s.enc_states.pkl" % (opt.models[0], opt.src), "wb"))
+    if opt.repr_file != "":
+        pickle.dump(encoder_states,open(opt.repr_file, "wb"))
 
 def _get_parser():
     parser = ArgumentParser(description='translate.py')

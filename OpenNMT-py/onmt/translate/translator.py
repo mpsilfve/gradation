@@ -648,7 +648,6 @@ class Translator(object):
 
         encoder_states.append(memory_bank)
 
-#        for s in [338,166,136,3,70,340,100,29,380,0,491,51,50,440,453,438,197,391,493,259]:
         for s in perturb_states:
             if memory_bank.size()[0] > 2:
                 memory_bank[-2,0,s] *= scaling_factor

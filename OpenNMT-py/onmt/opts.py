@@ -8,8 +8,9 @@ from onmt.transforms import AVAILABLE_TRANSFORMS
 
 def perturb_opts(parser):
     group = parser.add_argument_group("Perturb")
-    group.add('-perturb_states','--perturb_states',type=str,required=False)
-    group.add('-scaling_factor','--scaling_factor',type=float,required=False)
+    group.add('-perturb_states','--perturb_states',type=str,default="",required=False)
+    group.add('-scaling_factor','--scaling_factor',type=float,default=1.0,required=False)
+    group.add('-repr_file', '--repr_file', type=str, default="",required=False)
 
 def config_opts(parser):
     group = parser.add_argument_group("Configuration")
@@ -739,6 +740,41 @@ def translate_opts(parser):
     group.add('--gpu', '-gpu', type=int, default=-1,
               help="Device to run on")
 
+def print_embedding_opts(parser):
+    """ For printing model embeddings """
+    translate_opts(parser)
+    return
+    group = parser.add_argument_group('Model')
+    group.add('--model', '-model', dest='models', metavar='MODEL',
+              nargs='+', type=str, default=[], required=True,
+              help="Path to model .pt file(s). "
+                   "Multiple models can be specified, "
+                   "for ensemble decoding.")
+    group.add('--fp32', '-fp32', action='store_true',
+              help="Force the model to be in FP32 "
+                   "because FP16 is very slow on GTX1080(ti).")
+
+    group = parser.add_argument_group('Data')
+    group.add('--output', '-output', default='pred.txt',
+              help="Path to output the predictions (each line will "
+                   "be the decoded sequence")
+    group.add('--data_type', '-data_type', default="text",
+              help="Type of the source input. Options: [text].")
+    group.add('--n_best', '-n_best', type=int, default=1,
+              help="If verbose is set, will output the n_best "
+              "decoded sentences")
+    group.add('--dump_beam', '-dump_beam', type=str, default="",
+              help='File to dump beam information to.')
+
+    group = parser.add_argument_group('Efficiency')
+    group.add('--gpu', '-gpu', type=int, default=-1,
+              help="Device to run on")
+    group.add('--report_align', '-report_align', action='store_true',
+              help="Report alignment for each translation.")
+    group.add('--report_time', '-report_time', action='store_true',
+              help="Report some translation time metrics")
+
+    _add_decoding_opts(parser)
 
 # Copyright 2016 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
