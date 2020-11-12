@@ -18,6 +18,24 @@ You can also scale encoder state activations in a **limited** way using the `--p
 
 The code will scale the activations of the encoder states 1 - 4 at the penultimate position in the input string. This is the position where gradation typically occurs.  
 
+### `evaluate.py`
+
+```python3 compare.py --sys sys_file.txt  --gold data/treebank-nouns.tsv.nom2gen.valid.tgt```
+
+Output:
+```
+Correct forms: 532, Total forms: 564, Accuracy for all forms: 94.33
+```
+
+```python3 compare.py --sys sys_file.txt  --gold data/treebank-nouns.tsv.nom2gen.valid.tgt --annotated data/treebank-nouns.tsv.nom2gen.valid.annotated.csv```
+
+Output:
+```
+Correct forms: 532, Total forms: 564, Accuracy for all forms: 94.33
+Correct forms: 153, Total forms: 162, Accuracy for all grad forms: 94.44
+Correct forms: 379, Total forms: 401, Accuracy for all non-grad forms: 94.51
+```
+
 ### `analyse_hidden_states.py`
 
 To find states which fire strongly when gradation occurs, use the `analyse_hidden_states.py` script:
