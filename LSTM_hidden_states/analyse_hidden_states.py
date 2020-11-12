@@ -90,6 +90,8 @@ quant_set = get_deltas(top_n,quant_gradation,cons_no_gradation,annotated_data[ha
                        data_hidden_states[half_of_data:],target_states=states)
 
 print("TOP %u states firing when gradation occurs:" % top_n)
+print(",".join([str(s) for s in states]))
+print()
 print("\\begin{adjustbox}{width=0.32\\textwidth}")
 print("\\begin{tabular}{lccccc}")
 print("\\multicolumn{6}{c}{{\\sc Model %s}}\\\\" % argv[1])
