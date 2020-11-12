@@ -23,6 +23,9 @@ def translate(opt):
     ArgumentParser.validate_translate_opts(opt)
     logger = init_logger(opt.log_file)
 
+    if opt.repr_file != "" and opt.batch_size != 1:
+        logger.info("WARNING! When using --repr_file, you should set --batch_size=1.")
+
     translator = build_translator(opt, logger=logger, report_score=True)
     src_shards = split_corpus(opt.src, opt.shard_size)
     tgt_shards = split_corpus(opt.tgt, opt.shard_size)
