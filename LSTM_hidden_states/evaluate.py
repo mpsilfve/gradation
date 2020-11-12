@@ -46,5 +46,5 @@ if __name__=="__main__":
 
         print("Correct forms: %u, Total forms: %u, Accuracy for all grad forms: %.2f" %
               eval(args.sys,args.gold,annotations,is_gradation))
-        print("Correct forms: %u, Total forms: %u, Accuracy for all grad forms: %.2f" %
+        print("Correct forms: %u, Total forms: %u, Accuracy for all non-grad forms: %.2f" %
               eval(args.sys,args.gold,annotations,no_gradation))
