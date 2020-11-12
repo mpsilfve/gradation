@@ -57,6 +57,14 @@ We would still need to:
 1. Run scaling experiments using 1, 5, 10, and 15 top-states in addition to 20.
 1. Run experiment on other models than 3.
 
+### Hidden dimension
+
+Currently, all of our models have encoder hidden dimension 250. Given that they are bidirectional models, this means that we get 500 hidden neurons in total. We should run the significance experiments using models of lower dimensionality 10, 50, 100, 150, 200. Additionally, we sould train both 1-layer and 2-layer models. Currently, all of our models are 2-layer. 
+
+### Correlating states
+
+Are there instances where a small number states jointly code for gradation? We might want to use [a decomposable probe](https://arxiv.org/pdf/2010.02812.pdf)
+
 ## Heatmaps for various states (produced by `plot_activation_heat_map.py`)
 
 ### Model 3, State 487 (highest overall activation for gradation for k, p and t)
