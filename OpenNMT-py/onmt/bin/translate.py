@@ -17,14 +17,14 @@ def translate(opt):
     if opt.perturb_states != '':
         onmt.translate.translator.perturb_states = [int(s) for s in opt.perturb_states.split(",")]
     else:
-        opt.perturb_states = []
+        onmt.translate.translator.perturb_states = []
     onmt.translate.translator.scaling_factor = opt.scaling_factor
 
     ArgumentParser.validate_translate_opts(opt)
     logger = init_logger(opt.log_file)
 
-    if opt.repr_file != "" and opt.batch_size != 1:
-        logger.info("WARNING! When using --repr_file, you should set --batch_size=1.")
+    if (opt.repr_file != "" or opt.perturb_states != '') and opt.batch_size != 1:
+        logger.info("WARNING! When using --repr_file or --perturb_states, you should set --batch_size=1.")
 
     translator = build_translator(opt, logger=logger, report_score=True)
     src_shards = split_corpus(opt.src, opt.shard_size)
