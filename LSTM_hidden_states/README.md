@@ -10,13 +10,15 @@ If you want to store encoder representations, this can be accomplished using the
 
 ```python3 ../OpenNMT-py/translate.py --src input_file.txt --model model.pt --repr_file representations.pkl --batch_size 1```
 
-Note that you should always set `--batch_size 1` when storing representations. This is required because OpenNMT internally permutes the examples in a batch of size > 1.
+**Note** that you should always set `--batch_size 1` when storing representations. This is required because OpenNMT internally permutes the examples in a batch of size > 1.
 
 You can also scale encoder state activations in a **limited** way using the `--perturb_states` and `--scaling_factor` flags. For example:
 
 ```python3 ../OpenNMT-py/translate.py --src input_file.txt --model model.pt --perturb_states 1,2,3,4 --scaling_factor -1```
 
-The code will scale the activations of the encoder states 1 - 4 at the penultimate position in the input string. This is the position where gradation typically occurs.  
+The code will scale the activations of the encoder states 1 - 4 at the penultimate position in the input string. This is the position where gradation typically occurs. 
+
+**Note** that you should always set `--batch_size 1` when using scaling state activations. This is required because it is difficult to identify the penultimate position in a batch of size > 1 where examples don't necessarily have equal lengths.
 
 ### `evaluate.py`
 
