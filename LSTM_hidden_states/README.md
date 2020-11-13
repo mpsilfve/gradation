@@ -14,7 +14,7 @@ If you want to store encoder representations, this can be accomplished using the
 
 You can also scale encoder state activations in a **limited** way using the `--perturb_states` and `--scaling_factor` flags. For example:
 
-```python3 ../OpenNMT-py/translate.py --src input_file.txt --model model.pt --perturb_states 1,2,3,4 --scaling_factor -1```
+```python3 ../OpenNMT-py/translate.py --src input_file.txt --model model.pt --perturb_states 1,2,3,4 --scaling_factor -1 --batch_size 1```
 
 The code will scale the activations of the encoder states 1 - 4 at the penultimate position in the input string. This is the position where gradation typically occurs. 
 
