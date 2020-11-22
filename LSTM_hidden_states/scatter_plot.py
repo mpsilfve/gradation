@@ -10,7 +10,7 @@ AFFECTED_CONSONANT=4
 DIRECTION=5
 
 HIDDEN_STATES="models/gradation_3_step_3000.pt.treebank-nouns.tsv.nom2gen.valid.src.enc_states.pkl"
-VALID_FILE="treebank-nouns.tsv.nom2gen.valid.annotated.csv"
+VALID_FILE="data/treebank-nouns.tsv.nom2gen.valid.annotated.csv"
 
 data_hidden_states = pickle.load(open(HIDDEN_STATES,"br"))
 annotated_data = [l.split(",") for l in open(VALID_FILE).read().split("\n")][1:]
@@ -74,7 +74,7 @@ if __name__=="__main__":
             act1 = pool(ss).numpy()[s1] + random()*0.05
             act2 = pool(ss).numpy()[s2] + random()*0.05
             if is_k(datum):
-                if act1 < 0:
+                if is_inverse(datum):
                     inv_k_grad_act1.append(act1)
                     inv_k_grad_act2.append(act2)
                 else:
@@ -82,7 +82,7 @@ if __name__=="__main__":
                     k_grad_act2.append(act2)
 
             elif is_p(datum):
-                if act1 < 0:
+                if is_inverse(datum):
                     inv_p_grad_act1.append(act1)
                     inv_p_grad_act2.append(act2)
                 else:
@@ -90,9 +90,10 @@ if __name__=="__main__":
                     p_grad_act2.append(act2)
 
             elif is_t(datum):
-                if act1 < 0:
+                if is_inverse(datum):
                     inv_t_grad_act1.append(act1)
                     inv_t_grad_act2.append(act2)
+                    print(datum,act1,act2)
                 else:
                     t_grad_act1.append(act1)
                     t_grad_act2.append(act2)
@@ -107,7 +108,7 @@ if __name__=="__main__":
             continue
     plt.scatter(no_grad_act1, no_grad_act2, marker="$\cdot$", c="black", edgecolors='none',
                 label="no gradation")
-    plt.scatter(k_grad_act1, k_grad_act2, marker="$k$", c="blue", edgecolors='none',s=80,
+    plt.scatter(k_grad_act1, k_grad_act2, marker="$k$", c="blue", edgecolors='none',s=80,                
                 label="direct k-gradation")
     plt.scatter(p_grad_act1, p_grad_act2, marker="$p$", c="orange", edgecolors='none', s=80,
                 label="direct p-gradation")
