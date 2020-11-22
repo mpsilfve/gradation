@@ -88,16 +88,13 @@ if __name__=="__main__":
                 else:
                     p_grad_act1.append(act1)
                     p_grad_act2.append(act2)
-
             elif is_t(datum):
                 if is_inverse(datum):
                     inv_t_grad_act1.append(act1)
                     inv_t_grad_act2.append(act2)
-                    print(datum,act1,act2)
                 else:
                     t_grad_act1.append(act1)
                     t_grad_act2.append(act2)
-
             else:
                 if act1 < -0.4:
                     print(datum[0].replace(" ",""),datum[1].replace(" ",""))
@@ -108,17 +105,16 @@ if __name__=="__main__":
             continue
     plt.scatter(no_grad_act1, no_grad_act2, marker="$\cdot$", c="black", edgecolors='none',
                 label="no gradation")
-    plt.scatter(k_grad_act1, k_grad_act2, marker="$k$", c="blue", edgecolors='none',s=80,                
+    plt.scatter(k_grad_act1, k_grad_act2, marker="$k$", c="deepskyblue", edgecolors='none',s=80,                
                 label="direct k-gradation")
-    plt.scatter(p_grad_act1, p_grad_act2, marker="$p$", c="orange", edgecolors='none', s=80,
+    plt.scatter(p_grad_act1, p_grad_act2, marker="$p$", c="gold", edgecolors='none', s=80,
                 label="direct p-gradation")
-    plt.scatter(t_grad_act1, t_grad_act2, marker="$t$", c="green", edgecolors='none', s=80,
+    plt.scatter(t_grad_act1, t_grad_act2, marker="$t$", c="mediumspringgreen", edgecolors='none', s=80,
                 label="direct t-gradation")
-    plt.scatter(inv_k_grad_act1, inv_k_grad_act2, marker="$K$", c="blue", edgecolors='none', s=80,
+    plt.scatter(inv_k_grad_act1, inv_k_grad_act2, marker="$\mathbf{K}$", c="mediumblue", edgecolors='none', s=80,
                 label="indirect k-gradation")
-    plt.scatter(inv_p_grad_act1, inv_p_grad_act2, marker="$P$", c="orange", edgecolors='none', s=80,
+    plt.scatter(inv_p_grad_act1, inv_p_grad_act2, marker="$\mathbf{P}$", c="darkorange", edgecolors='none', s=80,
                 label="indirect p-gradation")
-    plt.scatter(inv_t_grad_act1, inv_t_grad_act2, marker="$T$", c="green", edgecolors='none',s=80,
+    plt.scatter(inv_t_grad_act1, inv_t_grad_act2, marker="$\mathbf{T}$", c="forestgreen", edgecolors='none',s=80,
                 label="indirect t-gradation")
-    plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.,numpoints=1)
     plt.savefig("activation_plot.pdf",bbox_inches='tight')
