@@ -10,7 +10,7 @@ def draw_gaussian_ellipse(mean, cov, color):
         mean ([type]): [description]
         cov ([type]): [description]
     """
-    s = 4.605 # 90% confidence interval band
+    s = 5.991 # 90% confidence interval band
     # https://www.visiondummy.com/2014/04/draw-error-ellipse-representing-covariance-matrix
     # https://scikit-learn.org/stable/auto_examples/mixture/plot_gmm_covariances.html#sphx-glr-auto-examples-mixture-plot-gmm-covariances-py
     eigvals, eigvecs = LA.eig(cov) # TODO: these aren't sorted
@@ -20,6 +20,7 @@ def draw_gaussian_ellipse(mean, cov, color):
     min_length = 2 * np.sqrt(s) * np.sqrt(eigvals[min_eigval_i]) 
     # angle = np.arctan2(principal_axis[1], principal_axis[0]) 
     angle = 180 * np.arctan2(principal_axis[1], principal_axis[0]) / np.pi
+    # TODO: something isn't right about the angle addition
     return Ellipse((mean[0], mean[1]), prin_length, min_length, angle + 90, alpha=0.5, color=color, fill=False) 
 
 # def plot_points(frame, ax):

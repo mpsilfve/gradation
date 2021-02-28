@@ -49,6 +49,7 @@ class QDA():
     def predict(self, X):
         log_probs = self.predict_log_proba(X)
         preds = log_probs.argmax(axis=1) 
+        preds = np.array(map_list(lambda x: 1 if x == 0 else 0, preds))
         return self.classes_[preds]
 
     def predict_log_proba(self, X):
@@ -60,4 +61,5 @@ class QDA():
         log_prob_c1 = np.apply_along_axis(partial(calculate_mvn_logpdf, mvns[0]), 1, X)
         log_prob_c2 = np.apply_along_axis(partial(calculate_mvn_logpdf, mvns[1]), 1, X)
         log_probs = np.column_stack((log_prob_c1, log_prob_c2))
+
         return log_probs

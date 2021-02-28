@@ -1,5 +1,8 @@
+from ..utils.utils_iter import map_list
+from scipy.stats import multivariate_normal
 import numpy as np 
 from functools import partial
+
 class DiagonalLDA():
     """Diagonal LDA for two class classification
     """
@@ -32,16 +35,22 @@ class DiagonalLDA():
         self.class_priors = [0.5, 0.5]
         return self
 
-    def predict(self, X):
-        m1, m2, pev = self.centroid_one, self.centroid_two, self.pev
-        dc = lambda mc, class_prior, vec: -(((vec - mc)**2)/2*pev).sum() + np.log(class_prior)
+    # def predict(self, X):
+    #     m1, m2, pev = self.centroid_one, self.centroid_two, self.pev
+    #     dc = lambda mc, class_prior, vec: -(((vec - mc)**2)/2*pev).sum() + np.log(class_prior)
 
 
-        prob_c1 = np.apply_along_axis(partial(dc, m1, self.class_priors[1]), 1, X)
-        prob_c2 = np.apply_along_axis(partial(dc, m2, self.class_priors[0]), 1, X)
+    #     prob_c1 = np.apply_along_axis(partial(dc, m1, self.class_priors[1]), 1, X)
+    #     prob_c2 = np.apply_along_axis(partial(dc, m2, self.class_priors[0]), 1, X)
         
-        probs = np.column_stack((prob_c2, prob_c1,))
-        preds = probs.argmax(axis=1) 
+    #     probs = np.column_stack((prob_c2, prob_c1,))
+    #     preds = probs.argmax(axis=1) 
+    #     return self.classes_[preds]
+
+    def predict(self, X):
+        log_probs = self.predict_log_proba(X)
+        preds = log_probs.argmax(axis=1) 
+        preds = np.array(map_list(lambda x: 1 if x == 0 else 0, preds))
         return self.classes_[preds]
 
     def predict_log_proba(self, X):
@@ -52,15 +61,24 @@ class DiagonalLDA():
         it is a joint probability; not a direct probability of p(y=c).
         See page 108 (Chapter 4) of Murphy's probablistic learning.
         """
-        m1, m2, pev = self.centroid_one, self.centroid_two, self.pev 
-        # dc = lambda mc, vec: -(((vec - mc)**2) / 2*(pev)**2).sum()
+        mvns = map_list(lambda mean_cov_pair: multivariate_normal(mean_cov_pair[0], np.diag(mean_cov_pair[1])), zip([self.centroid_one,self.centroid_two], [self.pev, self.pev]))
+        # NOTE: this is doesn't take into account the class probabiltiies 
+        calculate_mvn_logpdf = lambda mvn, vec: mvn.logpdf(vec) 
+        log_prob_c1 = np.apply_along_axis(partial(calculate_mvn_logpdf, mvns[0]), 1, X)
+        log_prob_c2 = np.apply_along_axis(partial(calculate_mvn_logpdf, mvns[1]), 1, X)
+        log_probs = np.column_stack((log_prob_c1, log_prob_c2))
+        return log_probs
 
-        dc = lambda mc, vec: -(((vec - mc)**2)/(2*(pev**2))).sum() 
-        prob_c1 = np.apply_along_axis(partial(dc, m1), 1, X)
-        prob_c2 = np.apply_along_axis(partial(dc, m2), 1, X)
+
+        # m1, m2, pev = self.centroid_one, self.centroid_two, self.pev 
+        # # dc = lambda mc, vec: -(((vec - mc)**2) / 2*(pev)**2).sum()
+
+        # # dc = lambda mc, vec: -(((vec - mc)**2)/(2*(pev**2))).sum() 
+        # prob_c1 = np.apply_along_axis(partial(dc, m1), 1, X)
+        # prob_c2 = np.apply_along_axis(partial(dc, m2), 1, X)
         
-        probs = np.column_stack((prob_c1, prob_c2))
-        return probs
+        # probs = np.column_stack((prob_c1, prob_c2))
+        # return probs
 
     def get_params(self, deep=False):
         return {}

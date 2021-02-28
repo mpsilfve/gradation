@@ -8,7 +8,7 @@ from packages.visualizations.visualize_gaussian import *
 from packages.probes.diagonal_lda import *
 from packages.probes.qda import *
 from packages.pkl_operations.pkl_io import *
-from scipy.stats import multivariate_normal
+from scipy.stats import multivariate_normal, norm
 
 np.random.seed(0)
 
@@ -88,19 +88,29 @@ def test_qda():
         ellipse = draw_gaussian_ellipse(m, cov, c)
         draw_ellipse(ellipse, ax)
     store_pic_dynamic(plt, 'samples_qda', 'results')
+
+def compare_scaled_densities():
+    pointsA = np.array([0,1,2])
+    pointsB = pointsA / 100
+    gA = norm(loc=1, scale=np.sqrt(2/3))
+    gB = norm(loc=0.01, scale=np.sqrt(2/300))
+    print(map_list(gA.pdf, pointsA))
+    print(map_list(gB.pdf, pointsB))
         
 def main(args):
     if args.test_dlda:
         test_dlda()
     elif args.test_qda:
         test_qda()
-
+    elif args.compare_scaled_densities:
+        compare_scaled_densities()
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--test_dlda', action='store_true')
     parser.add_argument('--test_qda', action='store_true')
+    parser.add_argument('--compare_scaled_densities', action='store_true')
     # parser.add_argument('--', action='store_true')
 
     main(parser.parse_args())

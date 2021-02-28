@@ -35,8 +35,8 @@ def plot_qda_ellipses(train_frame, validation_frame, dimensions):
     m2 = model.post_means[1]
     cov1 = model.post_covs[0]
     cov2 = model.post_covs[1]
-    ellipse_m1 = draw_gaussian_ellipse(m1, cov1, cs[1] )
-    ellipse_m2 = draw_gaussian_ellipse(m2, cov2, cs[0])
+    ellipse_m1 = draw_gaussian_ellipse(m1, cov1, cs[0] )
+    ellipse_m2 = draw_gaussian_ellipse(m2, cov2, cs[1])
     draw_ellipse(ellipse_m1, ax)
     draw_ellipse(ellipse_m2, ax)
     sns.scatterplot(data=validation_frame, x=dimensions[0], y=dimensions[1], hue=LABEL_COLUMN, hue_order=['yes', 'no'],  ax=ax, palette=cs)
